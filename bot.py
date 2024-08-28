@@ -55,7 +55,7 @@ async def on_ready():
     print('État du bot mis à jour à "Version 2.4"')
 
     # ID du canal où le message doit être envoyé
-    channel_id = 686257173914845205  # Remplacez par l'ID du salon cible
+    channel_id =   # Remplacez par l'ID du salon cible
     channel = bot.get_channel(channel_id)
     
     if channel:
