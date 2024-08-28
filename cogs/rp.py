@@ -151,7 +151,7 @@ class RP(commands.Cog):
     async def rp(self, interaction: discord.Interaction, duree: str, raison: str = None):
         user = interaction.user
         # Vérification des rôles
-        if not any(role.name in ['Administrateur', 'Modérateur', 'DB player', 'SURVEILLANT SPATIAL', 'LdG', 'Admin'] for role in user.roles):
+        if not any(role.name in ['role1', 'role2'] for role in user.roles): #Vérifie que l'utilisateur a l'un des rôles spécifiés (Les rôles doivent être écrit comme ceci : 'Role1', 'Role2' ect)
             await interaction.response.send_message(
                 f"{user.mention}, vous n'avez pas les rôles requis pour utiliser cette commande.", ephemeral=True)
             return

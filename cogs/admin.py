@@ -22,7 +22,7 @@ class Admin(commands.Cog):
         discord.app_commands.Choice(name="Changelogs", value="changelogs"),
         discord.app_commands.Choice(name="Rappel Perso", value="rappel_perso")
     ])
-    @app_commands.checks.has_any_role('Administrateur', 'Modérateur', 'SURVEILLANT SPATIAL', 'Admin')  # Seuls les administrateurs ou modérateurs peuvent utiliser cette commande
+    @app_commands.checks.has_any_role('role1', 'role2')  # Vérifie que l'utilisateur a l'un des rôles spécifiés (Les rôles doivent être écrit comme ceci : 'Role1', 'Role2' ect)
     async def admin(self, interaction: discord.Interaction, action: str):
         if action == "restart":
             await interaction.response.send_message("Redémarrage du bot...", ephemeral=False)

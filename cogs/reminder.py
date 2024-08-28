@@ -7,7 +7,7 @@ class Reminder(commands.Cog):
         self.bot = bot
 
     @commands.command(name='r', help='Fait un rappel de 9m45s')
-    @commands.has_any_role('Administrateur', 'Modérateur', 'DB player', 'SURVEILLANT SPATIAL', 'LdG', 'Admin')  # Vérifie que l'utilisateur a l'un des rôles spécifiés
+    @commands.has_any_role('role1', 'role2')  # Vérifie que l'utilisateur a l'un des rôles spécifiés (Les rôles doivent être écrit comme ceci : 'Role1', 'Role2' ect)
     async def rappel(self, ctx):
         user = ctx.author
         

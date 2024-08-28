@@ -10,7 +10,7 @@ class Carte(commands.Cog):
     async def carte(self, interaction: discord.Interaction):
         user = interaction.user
         # Vérification des rôles
-        if not any(role.name in ['Administrateur', 'Modérateur', 'DB player', 'SURVEILLANT SPATIAL', 'LdG'] for role in user.roles):
+        if not any(role.name in ['role1', 'role2'] for role in user.roles):#Vérifie que l'utilisateur a l'un des rôles spécifiés (Les rôles doivent être écrit comme ceci : 'Role1', 'Role2' ect)
             await interaction.response.send_message(
                 f"{user.mention}, vous n'avez pas les rôles requis pour utiliser cette commande.", ephemeral=True)
             return

@@ -79,7 +79,7 @@ async def on_command_error(ctx, error):
     print(f'Erreur de commande: {error}')
 
 @bot.command(name='ping', help='Répond avec Pong!')
-@commands.has_any_role('Administrateur', 'Modérateur', 'DB player', 'SURVEILLANT SPATIAL', 'LdG')  # Vérifie que l'utilisateur a l'un des rôles spécifiés
+@commands.has_any_role('role1', 'role2')  # Vérifie que l'utilisateur a l'un des rôles spécifiés (Les rôles doivent être écrit comme ceci : 'Role1', 'Role2' ect)
 async def ping(ctx):
     user = ctx.author
     bot_latency = round(bot.latency * 1000)  # Latence du bot en millisecondes
